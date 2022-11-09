@@ -1,0 +1,29 @@
+* {
+    margin:0;
+    padding:0;
+    border:none;
+    
+}
+body {
+    background-color: #FADCD9;
+}
+#header-container {
+    display:flex;
+    justify-content: center;
+    margin-top:25px;
+}
+#image-container {
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+    height: 220px;
+}
+#question-container {
+    margin-top:20px;
+    display:flex;
+    justify-content: center;
+}
+.answers-container {
+    display: flex;
+    justify-content: center;
+}
