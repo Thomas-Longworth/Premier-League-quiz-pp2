@@ -5,12 +5,16 @@
     
 }
 body {
-    background-color: #FADCD9;
+    background-image: linear-gradient(to bottom right, #F8EA8C, #A4E8E0);
+    background-repeat: no-repeat;
+    height:1000px;
+    
 }
 #header-container {
     display:flex;
     justify-content: center;
     margin-top:25px;
+    border:1px solid black;
 }
 #image-container {
     margin-top:20px;
@@ -27,3 +31,8 @@ body {
     display: flex;
     justify-content: center;
 }
+.answer-letter {
+
+    
+    color: black;
+  }
