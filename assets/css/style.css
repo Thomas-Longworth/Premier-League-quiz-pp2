@@ -1,7 +1,7 @@
 * {
     margin:0;
     padding:0;
-    border:none;
+   
     
 }
 body {
@@ -26,6 +26,8 @@ body {
     margin-top:20px;
     display:flex;
     justify-content: center;
+    
+   
 }
 
 
@@ -48,3 +50,8 @@ body {
     padding:1px;
     color: black;
   }
+
+#a-button {
+    margin-left:182px;
+    
+}
