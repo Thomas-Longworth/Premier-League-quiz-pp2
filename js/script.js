@@ -1,17 +1,20 @@
-console.log("working")
 
-
+const startButton= document.getElementById("start-button")
+startButton.addEventListener("click", runGame)
+const nextQuestion = document.getElementById("next-button")
+nextQuestion.addEventListener("click", runNextQuestion)
 const buttonA = document.getElementById("a-button")
 buttonA.addEventListener("click", aButtonClick)
-
 const buttonB = document.getElementById("b-button")
 buttonB.addEventListener("click", bButtonClick)
-
 const buttonC = document.getElementById("c-button")
 buttonC.addEventListener("click", cButtonClick)
-
 const buttonD = document.getElementById("d-button")
 buttonD.addEventListener("click", dButtonClick)
+
+const questionContainer= document.getElementById("question-container")
+const answerContainer= document.getElementById("answer-flex")
+const nextButtonContainer= document.getElementById("next-button-container")
 
 let questionBox = document.getElementById("question-box")
 let questionIndex = 0
@@ -68,6 +71,15 @@ const questions = [
 
 //A function for running the game
 function runGame() {
+    startButton.classList.add("hide")
+    questionContainer.classList.remove("hide")
+    answerContainer.classList.remove("hide")
+    nextButtonContainer.classList.remove("hide")
+
+
+    
+
+
     questionBox.textContent = questions[questionIndex].question
 
     answerTextA.textContent = questions[questionIndex].answer[0]
@@ -76,13 +88,11 @@ function runGame() {
     answerTextD.textContent = questions[questionIndex].answer[3]
 
 
+}
 
-
-
-
-
-
-   
+function runNextQuestion(){
+    questionIndex++;
+    runGame();
 
 }
 function aButtonClick() {
@@ -101,4 +111,3 @@ function dButtonClick() {
     console.log("working as intended")
 
 } 
-runGame()
