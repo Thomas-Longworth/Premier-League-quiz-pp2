@@ -1,28 +1,29 @@
 
-const startButton= document.getElementById("start-button")
-startButton.addEventListener("click", runGame)
-const nextQuestion = document.getElementById("next-button")
-nextQuestion.addEventListener("click", runNextQuestion)
-const buttonA = document.getElementById("a-button")
-buttonA.addEventListener("click", aButtonClick)
-const buttonB = document.getElementById("b-button")
-buttonB.addEventListener("click", bButtonClick)
-const buttonC = document.getElementById("c-button")
-buttonC.addEventListener("click", cButtonClick)
-const buttonD = document.getElementById("d-button")
-buttonD.addEventListener("click", dButtonClick)
+const startButton= document.getElementById("start-button");
+startButton.addEventListener("click", runGame);
+const nextQuestion = document.getElementById("next-button");
+nextQuestion.addEventListener("click", runNextQuestion);
 
-const questionContainer= document.getElementById("question-container")
-const answerContainer= document.getElementById("answer-flex")
-const nextButtonContainer= document.getElementById("next-button-container")
+const buttonA = document.getElementById("a-button");
+buttonA.addEventListener("click", aButtonClick);
+const buttonB = document.getElementById("b-button");
+buttonB.addEventListener("click", bButtonClick);
+const buttonC = document.getElementById("c-button");
+buttonC.addEventListener("click", cButtonClick);
+const buttonD = document.getElementById("d-button");
+buttonD.addEventListener("click", dButtonClick);
+ 
+const questionContainer= document.getElementById("question-container");
+const answerContainer= document.getElementById("answer-flex");
+const nextButtonContainer= document.getElementById("next-button-container");
 
-let questionBox = document.getElementById("question-box")
-let questionIndex = 0
+let questionBox = document.getElementById("question-box");
+let questionIndex = 0;
 
-let answerTextA = document.getElementById("answer-text-a")
-let answerTextB = document.getElementById("answer-text-b")
-let answerTextC = document.getElementById("answer-text-c")
-let answerTextD = document.getElementById("answer-text-d")
+let answerTextA = document.getElementById("answer-text-a");
+let answerTextB = document.getElementById("answer-text-b");
+let answerTextC = document.getElementById("answer-text-c");
+let answerTextD = document.getElementById("answer-text-d");
 
 const questions = [
     { 
@@ -71,43 +72,94 @@ const questions = [
 
 //A function for running the game
 function runGame() {
-    startButton.classList.add("hide")
-    questionContainer.classList.remove("hide")
-    answerContainer.classList.remove("hide")
-    nextButtonContainer.classList.remove("hide")
+    startButton.classList.add("hide");
+    questionContainer.classList.remove("hide");
+    answerContainer.classList.remove("hide");
+    nextButtonContainer.classList.remove("hide");
 
-
-    
-
-
-    questionBox.textContent = questions[questionIndex].question
-
-    answerTextA.textContent = questions[questionIndex].answer[0]
-    answerTextB.textContent = questions[questionIndex].answer[1]
-    answerTextC.textContent = questions[questionIndex].answer[2]
-    answerTextD.textContent = questions[questionIndex].answer[3]
+    questionBox.textContent = questions[questionIndex].question;
+    answerTextA.textContent = questions[questionIndex].answer[0];
+    answerTextB.textContent = questions[questionIndex].answer[1];
+    answerTextC.textContent = questions[questionIndex].answer[2];
+    answerTextD.textContent = questions[questionIndex].answer[3];
 
 
 }
 
 function runNextQuestion(){
     questionIndex++;
-    runGame();
+    runGame()
+      
 
 }
 function aButtonClick() {
     
+
+    if (questionIndex === 0 || 2 || 5) {
+        questionIndex++
+        alert("correct");
+
+    }
+    else {
+          prompt("not correct man");
+          console.log("its wrong");
+        
+    }
+
+   //add green
+    
+    //remove green
+    
 } 
 
 function bButtonClick() {
+    if (questionIndex === 4 || 6 ) {
+        questionIndex++
+        
+        alert("correct");
+        console.log("its reight ");
+        
+    }
+    else {
+        alert("not correct");
+        console.log("its wrong");
+        
+    }
+
    
 
 } 
 function cButtonClick() {
+    if (questionIndex === 1 || 7) {
+        questionIndex++
+        alert("correct");
+
+        console.log("its reight ");
+       
+    }
+    else {
+        alert("incorrect");
+        console.log("its wrong");
+        
+    }
+
     
 
 } 
 function dButtonClick() {
-    console.log("working as intended")
+    if (questionIndex === 3 || 8 || 9) {
+        questionIndex++
+        alert("correct");
+        console.log("its reight ");
+        
+    }
+    else {
+        alert("incorrect")
+        console.log("its wrong");
+        
+    }
+
+
+    
 
 } 
