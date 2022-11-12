@@ -50,6 +50,7 @@ body {
 #question-container h2 {
     background-color: azure;
     border:solid 1px black;
+    
 }
 
 
@@ -61,14 +62,19 @@ body {
     align-items: center;
 }
 .answers-container {
-    display:flex; 
+    display: flex;
+    justify-content: space-between;
+   
     margin-bottom:4px;
     background-color: azure;
     width:300px;
+    white-space: nowrap;
     
     
 }
 .answer-letter {
+    display:flex;
+    justify-content: flex-start;
     margin-right:5px;
     background-color: aqua;
     padding:4px;
@@ -76,10 +82,15 @@ body {
   }
 
 #answer-text-a {
-    padding:5px
+    display:flex;
+    padding:5px;
+   
 }
 #a-button {
-    margin-left:181px;
+    display:flex;
+    justify-content: flex-end;
+    
+    
     
 }
 
@@ -87,7 +98,7 @@ body {
     padding:5px
 }
 #b-button {
-    margin-left:182px;
+    
     
 }
 #answer-text-c {
@@ -95,13 +106,12 @@ body {
 }
 #c-button {
     
-    margin-left:182px;
+    
     
 }
 #answer-text-d {
     padding:5px
 }
 #d-button {
-    margin-left:180px;
-    
+   
 }
