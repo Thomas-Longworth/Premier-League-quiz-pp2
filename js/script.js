@@ -82,20 +82,18 @@ function runGame() {
     answerTextB.textContent = questions[questionIndex].answer[1];
     answerTextC.textContent = questions[questionIndex].answer[2];
     answerTextD.textContent = questions[questionIndex].answer[3];
-
-
 }
 
 function runNextQuestion(){
     questionIndex++
     console.log(questionIndex)
-    runGame()
-      
-
+    runGame();
 }
+
 function aButtonClick() {
-    
     if (questionIndex === 0) {
+       
+        setInterval(correctAnswer, 3000);
         alert("correct");
     }
     else if (questionIndex === 2) {
@@ -106,11 +104,6 @@ function aButtonClick() {
     else {
           alert("not correct man");   
     }
-
-   //add green
-    
-    //remove green
-    
 } 
 
 function bButtonClick() {
@@ -125,12 +118,12 @@ function bButtonClick() {
           alert("not correct man");   
     }
 
-  
 
 } 
 function cButtonClick() {
     if (questionIndex === 1) {
         alert("correct");
+       
     }
     else if (questionIndex === 7) {
         alert("correct");
@@ -138,9 +131,6 @@ function cButtonClick() {
     else {
           alert("not correct man");   
     }
-
-  
-
 } 
 function dButtonClick() {
     if (questionIndex === 3) {
@@ -154,10 +144,11 @@ function dButtonClick() {
     else {
           alert("not correct man");   
     }
-
-    
-
-
-    
-
+   
 } 
+
+function correctAnswer() {
+
+    answerTextA.style.color=("green") 
+    //changes answer index to green for 2 seconds  
+}
