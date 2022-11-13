@@ -4,6 +4,10 @@ startButton.addEventListener("click", runGame);
 const nextQuestion = document.getElementById("next-button");
 nextQuestion.addEventListener("click", runNextQuestion);
 
+
+
+
+
 const buttonA = document.getElementById("a-button");
 buttonA.addEventListener("click", aButtonClick);
 const buttonB = document.getElementById("b-button");
@@ -21,10 +25,6 @@ const infoContainer = document.getElementById("info-container")
 let questionBox = document.getElementById("question-box");
 let questionIndex = 0;
 
-let answerTextA = document.getElementById("answer-text-a");
-let answerTextB = document.getElementById("answer-text-b");
-let answerTextC = document.getElementById("answer-text-c");
-let answerTextD = document.getElementById("answer-text-d");
 
 const questions = [
     { 
@@ -80,22 +80,23 @@ function runGame() {
     infoContainer.classList.add("hide")
 
     questionBox.textContent = questions[questionIndex].question;
-    answerTextA.textContent = questions[questionIndex].answer[0];
-    answerTextB.textContent = questions[questionIndex].answer[1];
-    answerTextC.textContent = questions[questionIndex].answer[2];
-    answerTextD.textContent = questions[questionIndex].answer[3];
+    buttonA.textContent = questions[questionIndex].answer[0];
+    buttonB.textContent = questions[questionIndex].answer[1];
+    buttonC.textContent = questions[questionIndex].answer[2];
+    buttonD.textContent = questions[questionIndex].answer[3];
 }
 
 function runNextQuestion(){
-    answerTextA.style.backgroundColor="white"
+    
     questionIndex++
     console.log(questionIndex)
     runGame();
 }
 
 function aButtonClick() {
+    
     if (questionIndex === 0) {
-        answerTextA.style.backgroundColor="green"
+       
         setTimeout(runNextQuestion, 2000);
         
        

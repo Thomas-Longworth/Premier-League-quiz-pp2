@@ -4,6 +4,9 @@
    
     
 }
+
+
+
 body {
     
     display:flex;
@@ -20,6 +23,8 @@ body {
     width: 800px;
     height:600px;
     max-width:80%;
+    border:solid 2px black;
+    border-radius: 20px;
     background-color: antiquewhite;
     box-shadow: 0 0 12px 2px;
 
@@ -91,7 +96,7 @@ body {
 }
 .answers-container {
     display: flex;
-    justify-content: space-between;
+    
    
     margin-bottom:4px;
     background-color: azure;
@@ -109,37 +114,34 @@ body {
     color: black;
   }
 
-#answer-text-a {
-    display:flex;
-    padding:5px;
-   
-}
+
 #a-button {
-    display:flex;
-    justify-content: flex-end;
+   text-align: center;
+    width: 100%;
+  
+   
+    
+    
+}
+
+
+#b-button {
+    text-align: center;
+    width: 100%;
+
+    
+}
+
+#c-button {
+    text-align: center;
+    width: 100%;
     
     
     
 }
 
-#answer-text-b {
-    padding:5px
-}
-#b-button {
-    
-    
-}
-#answer-text-c {
-    padding:5px
-}
-#c-button {
-    
-    
-    
-}
-#answer-text-d {
-    padding:5px
-}
 #d-button {
+    text-align: center;
+    width: 100%;
    
 }
