@@ -137,11 +137,20 @@ body {
     width: 100%;
     
     
-    
 }
 
 #d-button {
     text-align: center;
     width: 100%;
    
+}
+.correct {
+    background-color: greenyellow;
+}
+.wrong {
+    background-color: red;
+
+}
+.neutral {
+    background-color: white;
 }

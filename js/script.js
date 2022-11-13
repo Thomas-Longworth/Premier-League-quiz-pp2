@@ -86,8 +86,16 @@ function runGame() {
     buttonD.textContent = questions[questionIndex].answer[3];
 }
 
-function runNextQuestion(){
-    
+function runNextQuestion() {
+    buttonA.classList.remove("wrong")
+    buttonA.classList.remove("correct")
+    buttonB.classList.remove("wrong")
+    buttonB.classList.remove("correct")
+    buttonC.classList.remove("correct")
+    buttonD.classList.remove("wrong")
+    buttonD.classList.remove("correct")
+
+   
     questionIndex++
     console.log(questionIndex)
     runGame();
@@ -96,64 +104,95 @@ function runNextQuestion(){
 function aButtonClick() {
     
     if (questionIndex === 0) {
-       
-        setTimeout(runNextQuestion, 2000);
-        
-       
+        correctAnswerA(); 
+         
     }
     else if (questionIndex === 2) {
-        alert("correct");
+        correctAnswerA();
+        
     }
     else if (questionIndex === 5) {
+        correctAnswerA();
     }
     else {
-          alert("not correct man");   
+          
+          wrongAnswerA();
     }
 } 
 
 function bButtonClick() {
     if (questionIndex === 4) {
-        alert("correct");
+        correctAnswerB();
+       
     }
     else if (questionIndex === 6) {
-        alert("correct");
+        correctAnswerB();
     }
-
     else {
-          alert("not correct man");   
+        wrongAnswerB();
     }
 
 
 } 
 function cButtonClick() {
     if (questionIndex === 1) {
-        alert("correct");
+        correctAnswerC()
        
     }
     else if (questionIndex === 7) {
-        alert("correct");
+        correctAnswerC()
+        
     }
     else {
-          alert("not correct man");   
+          
+          wrongAnswerC()  
     }
 } 
 function dButtonClick() {
     if (questionIndex === 3) {
-        alert("correct");
+        correctAnswerD()
     }
     else if (questionIndex === 8) {
-        alert("correct");
+        correctAnswerD()
     }
     else if (questionIndex === 9) {
+        correctAnswerD()
     }
     else {
-          alert("not correct man");   
+
+        wrongAnswerD()
     }
    
 } 
 
-function correctAnswer() {
+function correctAnswerA() {
+   buttonA.classList.add("correct")
 
-    answerTextA.style.color=("green") 
-    //changes answer index to green for 2 seconds  
 }
+function wrongAnswerA() {
+    buttonA.classList.add("wrong")
+}
+
+function correctAnswerB() {
+    buttonB.classList.add("correct")
+ 
+ }
+ function wrongAnswerB() {
+     buttonB.classList.add("wrong")
+ }
+
+ function correctAnswerC() {
+    buttonC.classList.add("correct")
+ 
+ }
+ function wrongAnswerC() {
+     buttonC.classList.add("wrong")
+ }
+
+ function correctAnswerD() {
+    buttonD.classList.add("correct")
+ 
+ }
+ function wrongAnswerD() {
+     buttonD.classList.add("wrong")
+ }
