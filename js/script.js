@@ -87,23 +87,24 @@ function runGame() {
 }
 
 function runNextQuestion(){
-    questionIndex++;
+    questionIndex++
+    console.log(questionIndex)
     runGame()
       
 
 }
 function aButtonClick() {
     
-
-    if (questionIndex === 0 || 2 || 5) {
-        questionIndex++
+    if (questionIndex === 0) {
         alert("correct");
-
+    }
+    else if (questionIndex === 2) {
+        alert("correct");
+    }
+    else if (questionIndex === 5) {
     }
     else {
-          prompt("not correct man");
-          console.log("its wrong");
-        
+          alert("not correct man");   
     }
 
    //add green
@@ -113,51 +114,48 @@ function aButtonClick() {
 } 
 
 function bButtonClick() {
-    if (questionIndex === 4 || 6 ) {
-        questionIndex++
-        
+    if (questionIndex === 4) {
         alert("correct");
-        console.log("its reight ");
-        
     }
-    else {
-        alert("not correct");
-        console.log("its wrong");
-        
+    else if (questionIndex === 6) {
+        alert("correct");
     }
 
-   
+    else {
+          alert("not correct man");   
+    }
+
+  
 
 } 
 function cButtonClick() {
-    if (questionIndex === 1 || 7) {
-        questionIndex++
+    if (questionIndex === 1) {
         alert("correct");
-
-        console.log("its reight ");
-       
+    }
+    else if (questionIndex === 7) {
+        alert("correct");
     }
     else {
-        alert("incorrect");
-        console.log("its wrong");
-        
+          alert("not correct man");   
     }
 
-    
+  
 
 } 
 function dButtonClick() {
-    if (questionIndex === 3 || 8 || 9) {
-        questionIndex++
+    if (questionIndex === 3) {
         alert("correct");
-        console.log("its reight ");
-        
+    }
+    else if (questionIndex === 8) {
+        alert("correct");
+    }
+    else if (questionIndex === 9) {
     }
     else {
-        alert("incorrect")
-        console.log("its wrong");
-        
+          alert("not correct man");   
     }
+
+    
 
 
     
