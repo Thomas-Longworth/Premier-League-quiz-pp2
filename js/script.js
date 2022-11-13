@@ -5,7 +5,7 @@ const nextQuestion = document.getElementById("next-button");
 nextQuestion.addEventListener("click", runNextQuestion);
 
 
-
+const userResult = document.getElementById("user-result")
 
 
 const buttonA = document.getElementById("a-button");
@@ -24,7 +24,7 @@ const infoContainer = document.getElementById("info-container")
 
 let questionBox = document.getElementById("question-box");
 let questionIndex = 0;
-
+let userScore=0
 
 const questions = [
     { 
@@ -86,19 +86,37 @@ function runGame() {
     buttonD.textContent = questions[questionIndex].answer[3];
 }
 
-function runNextQuestion() {
-    buttonA.classList.remove("wrong")
-    buttonA.classList.remove("correct")
-    buttonB.classList.remove("wrong")
-    buttonB.classList.remove("correct")
-    buttonC.classList.remove("correct")
-    buttonD.classList.remove("wrong")
-    buttonD.classList.remove("correct")
 
-   
+
+function runNextQuestion() {
     questionIndex++
-    console.log(questionIndex)
-    runGame();
+    if (questionIndex<10) {
+        
+        buttonA.classList.remove("wrong")
+        buttonA.classList.remove("correct")
+        buttonB.classList.remove("wrong")
+        buttonB.classList.remove("correct")
+        buttonC.classList.remove("correct")
+        buttonD.classList.remove("wrong")
+        buttonD.classList.remove("correct")
+        
+        
+        runGame();
+    }
+   
+    else {
+        //add submit button
+        window.open("end.html", "_self")  
+
+        
+      
+
+        
+        
+        
+        
+            
+    }
 }
 
 function aButtonClick() {
@@ -167,14 +185,17 @@ function dButtonClick() {
 
 function correctAnswerA() {
    buttonA.classList.add("correct")
+   userScore++
 
 }
 function wrongAnswerA() {
     buttonA.classList.add("wrong")
+
 }
 
 function correctAnswerB() {
     buttonB.classList.add("correct")
+    userScore++ 
  
  }
  function wrongAnswerB() {
@@ -183,6 +204,7 @@ function correctAnswerB() {
 
  function correctAnswerC() {
     buttonC.classList.add("correct")
+    userScore++
  
  }
  function wrongAnswerC() {
@@ -191,8 +213,11 @@ function correctAnswerB() {
 
  function correctAnswerD() {
     buttonD.classList.add("correct")
+    userScore++
  
  }
  function wrongAnswerD() {
      buttonD.classList.add("wrong")
  }
+ 
+ 
