@@ -16,6 +16,7 @@ buttonD.addEventListener("click", dButtonClick);
 const questionContainer= document.getElementById("question-container");
 const answerContainer= document.getElementById("answer-flex");
 const nextButtonContainer= document.getElementById("next-button-container");
+const infoContainer = document.getElementById("info-container")
 
 let questionBox = document.getElementById("question-box");
 let questionIndex = 0;
@@ -76,6 +77,7 @@ function runGame() {
     questionContainer.classList.remove("hide");
     answerContainer.classList.remove("hide");
     nextButtonContainer.classList.remove("hide");
+    infoContainer.classList.add("hide")
 
     questionBox.textContent = questions[questionIndex].question;
     answerTextA.textContent = questions[questionIndex].answer[0];
@@ -85,6 +87,7 @@ function runGame() {
 }
 
 function runNextQuestion(){
+    answerTextA.style.backgroundColor="white"
     questionIndex++
     console.log(questionIndex)
     runGame();
@@ -92,9 +95,10 @@ function runNextQuestion(){
 
 function aButtonClick() {
     if (questionIndex === 0) {
+        answerTextA.style.backgroundColor="green"
+        setTimeout(runNextQuestion, 2000);
+        
        
-        setInterval(correctAnswer, 3000);
-        alert("correct");
     }
     else if (questionIndex === 2) {
         alert("correct");

@@ -5,11 +5,25 @@
     
 }
 body {
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
     background-image: linear-gradient(to bottom right, #F8EA8C, #A4E8E0);
     background-repeat: no-repeat;
     height:1000px;
     font-size: 14px;
     
+}
+#gamecontainer {
+  
+    width: 800px;
+    height:600px;
+    max-width:80%;
+    background-color: antiquewhite;
+    box-shadow: 0 0 12px 2px;
+
+
 }
 .hide {
     display:none !important;
@@ -21,14 +35,28 @@ body {
     
 }
 #image-container {
+    
     margin-top:20px;
     display:flex;
+    
     justify-content: center;
     height: 220px;
-   
+  
 }
 #image-container img {
-    border: solid 3px green;
+    
+    border: solid 3px black;
+   
+   
+}
+#info-container {
+    margin-top:20px;
+    display: flex;
+    justify-content: center;
+   
+}
+#info-container h2 {
+    font-size:17px;
 }
 #start-button-container {
     display:flex;
@@ -48,9 +76,9 @@ body {
    
 }
 #question-container h2 {
-    background-color: azure;
-    border:solid 1px black;
+    font-size: 17px;
     
+  
 }
 
 
