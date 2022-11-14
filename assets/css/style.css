@@ -19,6 +19,7 @@ body {
     
 }
 #gamecontainer {
+    
   
     width: 800px;
     height:600px;
@@ -173,4 +174,11 @@ body {
 }
 .neutral {
     background-color: white;
+}
+
+#result-container {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
 }

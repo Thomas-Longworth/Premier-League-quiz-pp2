@@ -5,7 +5,7 @@ const nextQuestion = document.getElementById("next-button");
 nextQuestion.addEventListener("click", runNextQuestion);
 
 
-const userResult = document.getElementById("user-result")
+let userResult = document.getElementById("result-info")
 
 
 const buttonA = document.getElementById("a-button");
@@ -107,27 +107,35 @@ function runNextQuestion() {
    
     else {
         //add submit button
-        window.open("end.html", "_self")  
-
-            
+        console.log(userScore)
+        window.open("end.html", "_self") 
+        displayResult()
+       
+        
+        
     }
 }
-
 function aButtonClick() {
     
     if (questionIndex === 0) {
+        userScore++
         correctAnswerA(); 
         setTimeout(runNextQuestion, 300);
+       
          
     }
     else if (questionIndex === 2) {
+        userScore++
         correctAnswerA();
         setTimeout(runNextQuestion, 300);
         
+        
     }
     else if (questionIndex === 5) {
+        userScore++
         correctAnswerA();
         setTimeout(runNextQuestion, 300);
+
     }
     else {
           wrongAnswerA();
@@ -139,9 +147,11 @@ function bButtonClick() {
     if (questionIndex === 4) {
         correctAnswerB();
         setTimeout(runNextQuestion, 300);
+        userScore++
        
     }
     else if (questionIndex === 6) {
+        userScore++
         correctAnswerB();
         setTimeout(runNextQuestion, 300);
     }
@@ -154,11 +164,13 @@ function bButtonClick() {
 } 
 function cButtonClick() {
     if (questionIndex === 1) {
+        userScore++
         correctAnswerC()
         setTimeout(runNextQuestion, 300);
        
     }
     else if (questionIndex === 7) {
+        userScore++
         correctAnswerC()
         setTimeout(runNextQuestion, 300);
         
@@ -171,14 +183,17 @@ function cButtonClick() {
 } 
 function dButtonClick() {
     if (questionIndex === 3) {
+        userScore++
         correctAnswerD()
         setTimeout(runNextQuestion, 300);
     }
     else if (questionIndex === 8) {
+        userScore++
         correctAnswerD()
         setTimeout(runNextQuestion, 300); 
     }
     else if (questionIndex === 9) {
+        userScore++
         correctAnswerD()
         setTimeout(runNextQuestion, 300);
     }
@@ -226,5 +241,18 @@ function correctAnswerB() {
  function wrongAnswerD() {
      buttonD.classList.add("wrong")
  }
- 
- 
+ function displayResult() {
+
+    document.addEventListener("DOMContentLoaded", function() {
+        userResult.textContent="hlooej"
+        console.log("working")
+        
+    
+       
+    });
+
+
+
+    
+
+ }
