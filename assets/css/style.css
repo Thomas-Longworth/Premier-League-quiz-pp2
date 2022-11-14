@@ -7,7 +7,7 @@
 
 
 
-body {
+body { 
     
     display:flex;
     justify-content: center;
@@ -39,6 +39,9 @@ body {
     margin-top:25px;
     
 }
+
+
+
 #image-container {
     
     margin-top:20px;
@@ -52,8 +55,25 @@ body {
     
     border: solid 3px black;
    
+    animation-name: imgAnimation;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
    
 }
+@keyframes imgAnimation {
+    from {
+        transform: scale(1);
+
+    }
+    to {
+        transform: scale(1.1);
+    }
+
+    
+    
+}
+
+
 #info-container {
     margin-top:20px;
     display: flex;
