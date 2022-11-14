@@ -117,37 +117,37 @@ function aButtonClick() {
     
     if (questionIndex === 0) {
         correctAnswerA(); 
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
          
     }
     else if (questionIndex === 2) {
         correctAnswerA();
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
         
     }
     else if (questionIndex === 5) {
         correctAnswerA();
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
     }
     else {
           wrongAnswerA();
-          setTimeout(runNextQuestion, 500);
+          setTimeout(runNextQuestion, 300);
     }
 } 
 
 function bButtonClick() {
     if (questionIndex === 4) {
         correctAnswerB();
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
        
     }
     else if (questionIndex === 6) {
         correctAnswerB();
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
     }
     else {
         wrongAnswerB();
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
     }
 
 
@@ -155,37 +155,37 @@ function bButtonClick() {
 function cButtonClick() {
     if (questionIndex === 1) {
         correctAnswerC()
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
        
     }
     else if (questionIndex === 7) {
         correctAnswerC()
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
         
     }
     else {
           
           wrongAnswerC()  
-          setTimeout(runNextQuestion, 500);
+          setTimeout(runNextQuestion, 300);
     }
 } 
 function dButtonClick() {
     if (questionIndex === 3) {
         correctAnswerD()
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
     }
     else if (questionIndex === 8) {
         correctAnswerD()
-        setTimeout(runNextQuestion, 500); 
+        setTimeout(runNextQuestion, 300); 
     }
     else if (questionIndex === 9) {
         correctAnswerD()
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
     }
     else {
 
         wrongAnswerD()
-        setTimeout(runNextQuestion, 500);
+        setTimeout(runNextQuestion, 300);
     }
    
 } 
