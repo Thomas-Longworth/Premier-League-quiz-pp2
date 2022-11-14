@@ -97,6 +97,7 @@ function runNextQuestion() {
         buttonB.classList.remove("wrong")
         buttonB.classList.remove("correct")
         buttonC.classList.remove("correct")
+        buttonC.classList.remove("wrong")
         buttonD.classList.remove("wrong")
         buttonD.classList.remove("correct")
         
@@ -108,13 +109,6 @@ function runNextQuestion() {
         //add submit button
         window.open("end.html", "_self")  
 
-        
-      
-
-        
-        
-        
-        
             
     }
 }
@@ -123,31 +117,37 @@ function aButtonClick() {
     
     if (questionIndex === 0) {
         correctAnswerA(); 
+        setTimeout(runNextQuestion, 500);
          
     }
     else if (questionIndex === 2) {
         correctAnswerA();
+        setTimeout(runNextQuestion, 500);
         
     }
     else if (questionIndex === 5) {
         correctAnswerA();
+        setTimeout(runNextQuestion, 500);
     }
     else {
-          
           wrongAnswerA();
+          setTimeout(runNextQuestion, 500);
     }
 } 
 
 function bButtonClick() {
     if (questionIndex === 4) {
         correctAnswerB();
+        setTimeout(runNextQuestion, 500);
        
     }
     else if (questionIndex === 6) {
         correctAnswerB();
+        setTimeout(runNextQuestion, 500);
     }
     else {
         wrongAnswerB();
+        setTimeout(runNextQuestion, 500);
     }
 
 
@@ -155,30 +155,37 @@ function bButtonClick() {
 function cButtonClick() {
     if (questionIndex === 1) {
         correctAnswerC()
+        setTimeout(runNextQuestion, 500);
        
     }
     else if (questionIndex === 7) {
         correctAnswerC()
+        setTimeout(runNextQuestion, 500);
         
     }
     else {
           
           wrongAnswerC()  
+          setTimeout(runNextQuestion, 500);
     }
 } 
 function dButtonClick() {
     if (questionIndex === 3) {
         correctAnswerD()
+        setTimeout(runNextQuestion, 500);
     }
     else if (questionIndex === 8) {
         correctAnswerD()
+        setTimeout(runNextQuestion, 500); 
     }
     else if (questionIndex === 9) {
         correctAnswerD()
+        setTimeout(runNextQuestion, 500);
     }
     else {
 
         wrongAnswerD()
+        setTimeout(runNextQuestion, 500);
     }
    
 } 
