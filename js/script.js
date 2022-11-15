@@ -109,7 +109,7 @@ function runNextQuestion() {
         //add submit button
         console.log(userScore)
         window.open("end.html", "_self") 
-        displayResult()
+       
        
         
         
@@ -241,18 +241,4 @@ function correctAnswerB() {
  function wrongAnswerD() {
      buttonD.classList.add("wrong")
  }
- function displayResult() {
-
-    document.addEventListener("DOMContentLoaded", function() {
-        userResult.textContent="hlooej"
-        console.log("working")
-        
-    
-       
-    });
-
-
-
-    
-
- }
+ 

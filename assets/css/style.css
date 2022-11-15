@@ -12,7 +12,7 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, #F8EA8C, #A4E8E0);
+    background-image: linear-gradient(to bottom right, #000C66, #0000FF);
     background-repeat: no-repeat;
     height:1000px;
     font-size: 14px;
