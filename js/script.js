@@ -1,11 +1,19 @@
 
-const startButton= document.getElementById("start-button");
+
+const startButton = document.getElementById("start-button");
+
+
 startButton.addEventListener("click", runGame);
 const nextQuestion = document.getElementById("next-button");
 nextQuestion.addEventListener("click", runNextQuestion);
 
 
-let userResult = document.getElementById("result-info")
+const userResult = document.getElementById("result-info")
+
+endGameContainer = document.getElementById("end-game-container")
+
+
+
 
 
 const buttonA = document.getElementById("a-button");
@@ -108,7 +116,7 @@ function runNextQuestion() {
     else {
         //add submit button
         console.log(userScore)
-        window.open("end.html", "_self") 
+        endGameResult();
        
        
         
@@ -242,3 +250,19 @@ function correctAnswerB() {
      buttonD.classList.add("wrong")
  }
  
+
+function endGameResult(){
+    
+    questionContainer.classList.add("hide");
+    answerContainer.classList.add("hide");
+    nextButtonContainer.classList.add("hide");
+    infoContainer.classList.add("hide")
+    endGameContainer.classList.remove("hide")
+
+    
+
+    userResult.textContent = userScore;
+
+
+
+}
