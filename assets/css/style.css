@@ -145,19 +145,15 @@ body {
     
 }
 
-
 #b-button {
     text-align: center;
     width: 100%;
-
-    
+  
 }
-
 #c-button {
     text-align: center;
     width: 100%;
-    
-    
+       
 }
 
 #d-button {
@@ -176,9 +172,10 @@ body {
     background-color: white;
 }
 
-#result-container {
+#end-game-container{
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: yellow;
+    background-color: white;
 }
+
