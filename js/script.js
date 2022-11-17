@@ -109,7 +109,7 @@ function runNextQuestion() {
     }
 }
 
-//This function decides if the user clicked a question that has the correct 
+//These four functions decides if the user clicked the correct question answer button
 function aButtonClick() {
     if (questionIndex === 0) {
         userScore++
@@ -239,10 +239,17 @@ function endGameResult(){
     infoContainer.classList.add("hide")
     endGameContainer.classList.remove("hide")
 
-    
-
-    userResult.textContent = userScore;
 
 
+    if (userScore>4) {
+        userResult.textContent = `Well done, you scored ${userScore} / 10`;
+    }
+    else if (userScore<5) {
+        userResult.textContent = `Unlucky, you scored ${userScore} / 10`;
+    }
+    else {
+        console.log("error")
+
+    }
 
 }
