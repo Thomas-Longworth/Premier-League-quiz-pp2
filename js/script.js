@@ -11,7 +11,7 @@ const buttonC = document.getElementById("c-button");
 buttonC.addEventListener("click", cButtonClick);
 const buttonD = document.getElementById("d-button");
 buttonD.addEventListener("click", dButtonClick);
-
+const imageContainer=document.getElementById("image-container")
 
 const userResult = document.getElementById("result-info")
 endGameContainer = document.getElementById("end-game-container")
@@ -24,7 +24,7 @@ const infoContainer = document.getElementById("info-container")
 let questionBox = document.getElementById("question-box");
 let questionIndex = 0;
 let userScore=0
-//The quiz questions
+//The quiz questions 
 const questions = [
     { 
     question: "(1) Who the only team to have gone a full season without losing a match in the Premier League?",
@@ -69,7 +69,6 @@ const questions = [
         
  
 ]
-
 //A function for starting the game
 function runGame() {
     startButton.classList.add("hide");
@@ -84,7 +83,6 @@ function runGame() {
     buttonC.textContent = questions[questionIndex].answer[2];
     buttonD.textContent = questions[questionIndex].answer[3];
 }
-
 
 //A function for displaying the next question 
 function runNextQuestion() {
@@ -101,145 +99,99 @@ function runNextQuestion() {
         buttonD.classList.remove("correct") 
         runGame();
     }
-   
     else {
         console.log(userScore)
         endGameResult();
-     
+
     }
 }
-
 //These four functions decides if the user clicked the correct question answer button
 function aButtonClick() {
     if (questionIndex === 0) {
         userScore++
-        correctAnswerA(); 
+        buttonA.classList.add("correct");
         setTimeout(runNextQuestion, 300);     
     }
     else if (questionIndex === 2) {
         userScore++
-        correctAnswerA();
+        buttonA.classList.add("correct");
         setTimeout(runNextQuestion, 300);  
     }
     else if (questionIndex === 5) {
         userScore++
-        correctAnswerA();
+        buttonA.classList.add("correct");
         setTimeout(runNextQuestion, 300);
     }
     else {
-          wrongAnswerA();
-          setTimeout(runNextQuestion, 300);
+        buttonA.classList.add("wrong")
+        setTimeout(runNextQuestion, 300);
     }
 } 
 
 function bButtonClick() {
     if (questionIndex === 4) {
-        correctAnswerB();
-        setTimeout(runNextQuestion, 300);
         userScore++
-       
+        buttonB.classList.add("correct")
+        setTimeout(runNextQuestion, 300);   
     }
     else if (questionIndex === 6) {
         userScore++
-        correctAnswerB();
+        buttonB.classList.add("correct")
         setTimeout(runNextQuestion, 300);
     }
     else {
-        wrongAnswerB();
+        buttonB.classList.add("wrong")
         setTimeout(runNextQuestion, 300);
     }
-
-
 } 
 function cButtonClick() {
     if (questionIndex === 1) {
         userScore++
-        correctAnswerC()
+        buttonC.classList.add("correct")
         setTimeout(runNextQuestion, 300);
        
     }
     else if (questionIndex === 7) {
         userScore++
-        correctAnswerC()
+        buttonC.classList.add("correct")
         setTimeout(runNextQuestion, 300);
         
     }
     else {
-          
-          wrongAnswerC()  
-          setTimeout(runNextQuestion, 300);
+        buttonC.classList.add("wrong")  
+        setTimeout(runNextQuestion, 300);
     }
 } 
 function dButtonClick() {
     if (questionIndex === 3) {
         userScore++
-        correctAnswerD()
+        buttonD.classList.add("correct")
         setTimeout(runNextQuestion, 300);
     }
     else if (questionIndex === 8) {
         userScore++
-        correctAnswerD()
+        buttonD.classList.add("correct")
         setTimeout(runNextQuestion, 300); 
     }
     else if (questionIndex === 9) {
         userScore++
-        correctAnswerD()
+        buttonD.classList.add("correct") 
         setTimeout(runNextQuestion, 300);
     }
     else {
 
-        wrongAnswerD()
+        buttonD.classList.add("wrong")
         setTimeout(runNextQuestion, 300);
     }
    
 } 
-//These four functions change the colour to green and add 1 to the users score
-function correctAnswerA() {
-   buttonA.classList.add("correct");
-   userScore++;
-}
-function correctAnswerB() {
-    buttonB.classList.add("correct");
-    userScore++;
- }
- function correctAnswerC() {
-    buttonC.classList.add("correct");
-    userScore++;
- 
- }
- function correctAnswerD() {
-    buttonD.classList.add("correct");
-    userScore++;
-
- }
-
-//These four functions change the colour to green and add 1 to the users score
-
- function wrongAnswerA() {
-    buttonA.classList.add("wrong")
-
-}
-function wrongAnswerB() {
-    buttonB.classList.add("wrong")
-}
-function wrongAnswerC() {
-    buttonC.classList.add("wrong")
-}
-
- function wrongAnswerD() {
-     buttonD.classList.add("wrong")
- }
- 
-//Function to display the result of the quiz
 function endGameResult(){
-    
     questionContainer.classList.add("hide");
     answerContainer.classList.add("hide");
     nextButtonContainer.classList.add("hide");
     infoContainer.classList.add("hide")
     endGameContainer.classList.remove("hide")
-
-
+    imageContainer.classList.add("hide")
 
     if (userScore>4) {
         userResult.textContent = `Well done, you scored ${userScore} / 10`;
@@ -251,5 +203,4 @@ function endGameResult(){
         console.log("error")
 
     }
-
 }
