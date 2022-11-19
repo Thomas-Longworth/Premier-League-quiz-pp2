@@ -107,21 +107,12 @@ function runNextQuestion() {
 }
 //These four functions decides if the user clicked the correct question answer button
 function aButtonClick() {
-    if (questionIndex === 0) {
+    if (questionIndex === 0||questionIndex === 2||questionIndex === 5) {
         userScore++
         buttonA.classList.add("correct");
         setTimeout(runNextQuestion, 300);     
     }
-    else if (questionIndex === 2) {
-        userScore++
-        buttonA.classList.add("correct");
-        setTimeout(runNextQuestion, 300);  
-    }
-    else if (questionIndex === 5) {
-        userScore++
-        buttonA.classList.add("correct");
-        setTimeout(runNextQuestion, 300);
-    }
+    
     else {
         buttonA.classList.add("wrong")
         setTimeout(runNextQuestion, 300);
@@ -129,15 +120,10 @@ function aButtonClick() {
 } 
 
 function bButtonClick() {
-    if (questionIndex === 4) {
+    if (questionIndex === 4||questionIndex === 6) {
         userScore++
-        buttonB.classList.add("correct")
+        buttonB.classList.add("correct");
         setTimeout(runNextQuestion, 300);   
-    }
-    else if (questionIndex === 6) {
-        userScore++
-        buttonB.classList.add("correct")
-        setTimeout(runNextQuestion, 300);
     }
     else {
         buttonB.classList.add("wrong")
@@ -145,17 +131,11 @@ function bButtonClick() {
     }
 } 
 function cButtonClick() {
-    if (questionIndex === 1) {
+    if (questionIndex === 1||questionIndex === 7) {
         userScore++
         buttonC.classList.add("correct")
         setTimeout(runNextQuestion, 300);
        
-    }
-    else if (questionIndex === 7) {
-        userScore++
-        buttonC.classList.add("correct")
-        setTimeout(runNextQuestion, 300);
-        
     }
     else {
         buttonC.classList.add("wrong")  
@@ -163,21 +143,12 @@ function cButtonClick() {
     }
 } 
 function dButtonClick() {
-    if (questionIndex === 3) {
+    if ((questionIndex === 3||questionIndex === 8||questionIndex === 9)) {
         userScore++
         buttonD.classList.add("correct")
         setTimeout(runNextQuestion, 300);
     }
-    else if (questionIndex === 8) {
-        userScore++
-        buttonD.classList.add("correct")
-        setTimeout(runNextQuestion, 300); 
-    }
-    else if (questionIndex === 9) {
-        userScore++
-        buttonD.classList.add("correct") 
-        setTimeout(runNextQuestion, 300);
-    }
+    
     else {
 
         buttonD.classList.add("wrong")
