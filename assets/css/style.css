@@ -188,3 +188,34 @@ body {
     text-decoration: none;
 }
 
+#end-image-container {
+    
+    margin-top:20px;
+    display:flex;
+    
+    justify-content: center;
+    height: 220px;
+  
+}
+#end-image-container img {
+    
+    border: solid 3px black;
+   
+    animation-name: endImgAnimation;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+   
+}
+@keyframes endImgAnimation {
+    from {
+        transform: scale(1);
+
+    }
+    to {
+        transform: scale(1.1);
+    }
+
+    
+    
+}
+

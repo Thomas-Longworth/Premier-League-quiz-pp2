@@ -15,6 +15,8 @@ const imageContainer=document.getElementById("image-container")
 
 const userResult = document.getElementById("result-info")
 endGameContainer = document.getElementById("end-game-container")
+
+const endimagecontainer=document.getElementById("end-image-container")
  
 const questionContainer= document.getElementById("question-container");
 const answerContainer= document.getElementById("answer-flex");
@@ -163,11 +165,13 @@ function endGameResult(){
     infoContainer.classList.add("hide")
     endGameContainer.classList.remove("hide")
     imageContainer.classList.add("hide")
+    endimagecontainer.classList.remove("hide")
 
-    if (userScore>4) {
-        userResult.textContent = `Well done, you scored ${userScore} / 10`;
+    if (userScore>6) {
+        userResult.textContent = ` Very done, you scored ${userScore} / 10`;
     }
-    else if (userScore<5) {
+    
+    else if (userScore<7) {
         userResult.textContent = `Unlucky, you scored ${userScore} / 10`;
     }
     else {
