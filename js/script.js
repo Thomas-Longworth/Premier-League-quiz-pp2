@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */ 
+
 //Buttons
 const startButton = document.getElementById("start-button");
 startButton.addEventListener("click", runGame);
@@ -11,21 +13,25 @@ const buttonC = document.getElementById("c-button");
 buttonC.addEventListener("click", cButtonClick);
 const buttonD = document.getElementById("d-button");
 buttonD.addEventListener("click", dButtonClick);
-const imageContainer=document.getElementById("image-container")
 
-const userResult = document.getElementById("result-info")
-endGameContainer = document.getElementById("end-game-container")
 
-const endimagecontainer=document.getElementById("end-image-container")
+//Divs
+const imageContainer=document.getElementById("image-container");
+
+const userResult = document.getElementById("result-info");
+endGameContainer = document.getElementById("end-game-container");
+
+const endimagecontainer=document.getElementById("end-image-container");
  
 const questionContainer= document.getElementById("question-container");
 const answerContainer= document.getElementById("answer-flex");
 const nextButtonContainer= document.getElementById("next-button-container");
-const infoContainer = document.getElementById("info-container")
+const infoContainer = document.getElementById("info-container");
+const questionBox = document.getElementById("question-box");
 
-let questionBox = document.getElementById("question-box");
+//Quiz variables
 let questionIndex = 0;
-let userScore=0
+let userScore=0;
 //The quiz questions 
 const questions = [
     { 
@@ -88,35 +94,34 @@ function runGame() {
 
 //A function for displaying the next question 
 function runNextQuestion() {
-    questionIndex++
+    questionIndex++;
     if (questionIndex<10) {
-        
-        buttonA.classList.remove("wrong")
-        buttonA.classList.remove("correct")
-        buttonB.classList.remove("wrong")
-        buttonB.classList.remove("correct")
-        buttonC.classList.remove("correct")
-        buttonC.classList.remove("wrong")
-        buttonD.classList.remove("wrong")
-        buttonD.classList.remove("correct") 
+        buttonA.classList.remove("wrong");
+        buttonA.classList.remove("correct");
+        buttonB.classList.remove("wrong");
+        buttonB.classList.remove("correct");
+        buttonC.classList.remove("correct");
+        buttonC.classList.remove("wrong");
+        buttonD.classList.remove("wrong");
+        buttonD.classList.remove("correct") ;
         runGame();
     }
     else {
-        console.log(userScore)
+        console.log(userScore);
         endGameResult();
 
     }
 }
-//These four functions decides if the user clicked the correct question answer button
+//These four functions decides if the user clicked the correct answer
 function aButtonClick() {
     if (questionIndex === 0||questionIndex === 2||questionIndex === 5) {
-        userScore++
+        userScore++;
         buttonA.classList.add("correct");
         setTimeout(runNextQuestion, 300);     
     }
     
     else {
-        buttonA.classList.add("wrong")
+        buttonA.classList.add("wrong");
         setTimeout(runNextQuestion, 300);
     }
 } 
@@ -128,19 +133,19 @@ function bButtonClick() {
         setTimeout(runNextQuestion, 300);   
     }
     else {
-        buttonB.classList.add("wrong")
+        buttonB.classList.add("wrong");
         setTimeout(runNextQuestion, 300);
     }
 } 
 function cButtonClick() {
     if (questionIndex === 1||questionIndex === 7) {
         userScore++
-        buttonC.classList.add("correct")
+        buttonC.classList.add("correct");
         setTimeout(runNextQuestion, 300);
        
     }
     else {
-        buttonC.classList.add("wrong")  
+        buttonC.classList.add("wrong");  
         setTimeout(runNextQuestion, 300);
     }
 } 
@@ -158,14 +163,15 @@ function dButtonClick() {
     }
    
 } 
+//This function dipslays the result after the user completes the 10 questions
 function endGameResult(){
     questionContainer.classList.add("hide");
     answerContainer.classList.add("hide");
     nextButtonContainer.classList.add("hide");
-    infoContainer.classList.add("hide")
-    endGameContainer.classList.remove("hide")
-    imageContainer.classList.add("hide")
-    endimagecontainer.classList.remove("hide")
+    infoContainer.classList.add("hide");
+    endGameContainer.classList.remove("hide");
+    imageContainer.classList.add("hide");
+    endimagecontainer.classList.remove("hide");
 
     if (userScore>6) {
         userResult.textContent = ` Very done, you scored ${userScore} / 10`;
@@ -175,7 +181,7 @@ function endGameResult(){
         userResult.textContent = `Unlucky, you scored ${userScore} / 10`;
     }
     else {
-        console.log("error")
+        console.log("error");
 
     }
 }
