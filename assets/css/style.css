@@ -262,10 +262,12 @@ body {
     }
     
     #info-container {
+        
         margin-left:20px;
         margin-right:20px;
 
     }
+    
     .answers-container {
         max-width: 90%;
         
