@@ -156,7 +156,6 @@ body {
     display:flex;
     flex-direction: column;
     justify-content: center;
-
     align-items: center;
     background-color: beige;
     margin-top:30px
@@ -210,9 +209,7 @@ body {
 }
 
 @media screen and (max-width: 750px) {
-    body {
-        color:purple;
-    }
+   
     
     #image-container img{
         height:150px;
