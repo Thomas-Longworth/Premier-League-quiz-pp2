@@ -19,7 +19,7 @@ buttonD.addEventListener("click", dButtonClick);
 const imageContainer=document.getElementById("image-container");
 
 const userResult = document.getElementById("result-info");
-endGameContainer = document.getElementById("end-game-container");
+const endGameContainer = document.getElementById("end-game-container");
 
 const endimagecontainer=document.getElementById("end-image-container");
  
@@ -55,8 +55,8 @@ const questions = [
     answer: ["David Moyes ", "Kenny Dalglish", "Alex Ferguson", "Gareth Southgate"], 
     },
     {
-    question: "6) Who scored the 30,000th Premier League goal, in August 2021?",
-    answer: ["Chris Wood", "Robert Firmino", "Marcus Rashford", "Robbie Keane"] 
+    question: "(6) Who scored the 30,000th Premier League goal, in August 2021?",
+    answer: ["Chris Wood", "Robert Firmino", "Marcus Rashford", "Robbie Keane"] ,
     },   
     {
     question: "(7) Which goalkeeper has kept the most clean sheets in Premier League history?",
@@ -76,14 +76,14 @@ const questions = [
     }
         
  
-]
+];
 //A function for starting the game
 function runGame() {
     startButton.classList.add("hide");
     questionContainer.classList.remove("hide");
     answerContainer.classList.remove("hide");
     nextButtonContainer.classList.remove("hide");
-    infoContainer.classList.add("hide")
+    infoContainer.classList.add("hide");
 
     questionBox.textContent = questions[questionIndex].question;
     buttonA.textContent = questions[questionIndex].answer[0];
@@ -128,7 +128,7 @@ function aButtonClick() {
 
 function bButtonClick() {
     if (questionIndex === 4||questionIndex === 6) {
-        userScore++
+        userScore++;
         buttonB.classList.add("correct");
         setTimeout(runNextQuestion, 300);   
     }
@@ -139,7 +139,7 @@ function bButtonClick() {
 } 
 function cButtonClick() {
     if (questionIndex === 1||questionIndex === 7) {
-        userScore++
+        userScore++;
         buttonC.classList.add("correct");
         setTimeout(runNextQuestion, 300);
        
@@ -151,14 +151,14 @@ function cButtonClick() {
 } 
 function dButtonClick() {
     if ((questionIndex === 3||questionIndex === 8||questionIndex === 9)) {
-        userScore++
-        buttonD.classList.add("correct")
+        userScore++;
+        buttonD.classList.add("correct");
         setTimeout(runNextQuestion, 300);
     }
     
     else {
 
-        buttonD.classList.add("wrong")
+        buttonD.classList.add("wrong");
         setTimeout(runNextQuestion, 300);
     }
    
