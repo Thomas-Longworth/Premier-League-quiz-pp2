@@ -15,7 +15,7 @@ This is quiz website based on the English premier league. The website page can b
 
 ### Quiz questions section
 
-- This is the area where the 10 questions are displayed for the user. The user can select a qestion and it will tell them if its correct by turning green. If its wrong it will turn red. 
+- This is the area where the 10 questions are displayed for the user. The user can select a qestion and it will tell them if its correct by turning green. If its wrong, it will turn red. 
 It will automatically display the next question after selecting an answer or the user can do this manually by selecting the next question button.
 
 ![Questions image](assets/images/quest.JPG)
@@ -44,7 +44,7 @@ I also copied and pasted my CSS code with the W3C CSS validator and fixed all th
 - Accessibility: 
 I used Lighthouse in the dev tools and generated a score of 86%.
 - Javascript: 
-Using JSHint, I was able to check my javascript file for errors. I was able to fix all the syntax errors.
+Using JSHint, I was able to check my Javascript file for errors. I was able to fix all the syntax errors.
 
 
 
@@ -60,7 +60,7 @@ Using JSHint, I was able to check my javascript file for errors. I was able to f
 ## Credits
 
 #### Content
--For the Javascript, I got some ideas for quiz games from Web Dev Simplified on Youtube.
+- For the Javascript, I got some ideas for quiz games from Web Dev Simplified on Youtube.
 
 #### Media
 - The photos used in the Main screen section and End game section are taken from Pexels.com.
